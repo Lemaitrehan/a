@@ -1,21 +1,473 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="cn">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>中鹏培训</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="imagetoolbar" content="no">
+    <title>成人教育学院</title>
+    <meta name="keywords" content="学历">
+    <meta name="description" content="学历"/>
+    <link type="image/x-icon" rel="icon" href="http://kc.gdzp.org/favicon.ico"/>
+    <link rel="stylesheet" href="../common/css/common.css?t=002"/>
+    <link href="../common/css/swiper-3.4.2.min.css" type="text/css" rel="stylesheet">
+    <link href="./statics/css/gongCheng.css?t=0017" type="text/css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <link href="http://www.gdzp.org/statics/css/kc/sniefixed.css" rel="stylesheet" type="text/css">
+        <script src="http://www.gdzp.org/statics/js/kc/sn/iehtml5.js"></script>
+    <![endif]-->
+
+    <style>
+        #live800_msgDiv img {
+            width: auto;
+        }
+    </style>
 </head>
+
 <body>
-<div class="jumbotron">
-    <h1 class="display-4">中鹏培训</h1>
-    <p class="lead">网站正在建设中......</p>
-    <hr class="my-4">
-    <p class="lead">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-    </p>
+<!-- 遮罩-->
+<div id="layer" style="display: none;">
+    <div class="mid1080 modal-wrapper" >
+        <section class="modal modal1" id="apply-return" style="display: none;">
+            <img class="close-btn pos-close" src="./statics/images/close.png?t=0001" alt=""/>
+            <article class="modal-in">
+                <h2 id="respond-h2">提交成功！</h2>
+                <p class="desc" id="respond-p">查询结果将会1~3日内通知您！</p>
+            </article>
+        </section>
+    </div>
 </div>
+<!--遮罩结束-->
+<!-- 主菜单 -->
+<nav id="nav" class="xl-nav">
+    <ul class="mid1080 clearfix">
+        <li class="on first"><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" title="考证费用">考证费用</a>
+        </li>
+        <li>
+            <a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416"
+               title="考证时间">考证时间</a>
+        </li>
+        <li>
+            <a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416"
+               title="快速考证">快速考证</a>
+        </li>
+        <li class="last">
+            <a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" title="报考政策">报考政策</a>
+        </li>
+    </ul>
+</nav>
+<!-- 主菜单结束 -->
+<section class="gongCheng">
+    <div class="xl-intro-count">
+        <div class="mid1080">
+            <div id="backTop">
+                <img src="../common/imgs/backTop.png"/>
+            </div>
+            <div class="intro">
+                <img class="logo-img" src="./statics/images/02.png" alt=""/>
+                <h3 class="tit"><em>深圳市中鹏教育</em>培训中心</h3>
+                <ul class="xl-list-intro clearfix">
+                    <li>
+                        <i class="icon icon-1"></i>
+                        <p>学历学信网终身可查</p>
+                    </li>
+                    <li>
+                        <i class="icon icon-2"></i>
+                        <p>学费仅需<em>2180</em>元起</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="countdown-wrapper">
+                <h3 class="tit">本月网上报名截止时间</h3>
+                <p id="countdown" class="countdown">
+                    <em class="month">2</em><span>月</span>
+                    <em class="date">28</em><span>日</span>
+                </p>
+                <div class="btngroups">
+                    <a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="btn-bg">成人本科报考咨询通道</a>
+                    <a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="btn-bg btn-apply">申请1200元中鹏学历奖学金</a>
+                </div>
+                <p class="desc" id="countdown-desc"><em class="month">1</em>月<em class="date">31</em>日24:00截止</p>
+            </div>
+        </div>
+    </div>
+    <div class="mid1080 xl-boxshadow">
+        <div class="gongChengIn gongChengIn1">
+            <div class="evaluate">
+                <p class="tit"><i></i><span><em>在线测一测，</em>您适合哪种学历提升方式</span>
+                </p>
+                <form class="evaluate-frm" name="myform1" id="myform1">
+                    <input type="hidden" name="json" value="1">
+                    <input type="hidden" name="info[url]" value="" class="url">
+                    <input type="hidden" name="dosubmit" value=" 提交 ">
+                    <div class="list-evalu-item">
+                        <div class="evalu-item">
+                            <h3>1.您目前的学历层次：</h3>
+                            <div class="clearfix">
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[edu]" value="小学及以下" id="edu-primary"><span></span>
+                                    </div>
+                                    <label for="edu-primary">小学及以下</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[edu]" value="初中" id="edu-middle"
+                                               checked="checked"><span></span>
+                                    </div>
+                                    <label for="edu-middle">初中</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[edu]" value="高中" id="edu-high"><span></span>
+                                    </div>
+                                    <label for="edu-high">高中</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[edu]" value="中专" id="edu-secondary"><span></span>
+                                    </div>
+                                    <label for="edu-secondary">中专</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[edu]" value="大专" id="edu-secondary"><span></span>
+                                    </div>
+                                    <label for="edu-secondary">大专</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="evalu-item">
+                            <h3>2.您的年龄段：</h3>
+                            <div class="clearfix">
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[age]" value="18-23岁" id="age-23"><span></span>
+                                    </div>
+                                    <label for="age-23">18-23岁</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[age]" value="23-30岁" checked="checked"
+                                               id="age-30"><span></span>
+                                    </div>
+                                    <label for="age-30">23-30岁</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[age]" value="30-35岁" id="age-35"><span></span>
+                                    </div>
+                                    <label for="age-35">30-35岁</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[age]" value="35-40岁" id="age-40"><span></span>
+                                    </div>
+                                    <label for="age-40">35-40岁</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[age]" value="其他" id="age-other"><span></span>
+                                    </div>
+                                    <label for="age-other">其他</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="evalu-item">
+                            <h3>3.您更偏向哪种取证方式：</h3>
+                            <div class="clearfix">
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[method]" value="在家自学"
+                                               id="reason-job"><span></span>
+                                    </div>
+                                    <label for="reason-job">在家自学</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[method]" value="学校听课" id="reason-servant"
+                                               checked="checked"><span></span>
+                                    </div>
+                                    <label for="reason-servant">学校听课</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[method]" value="辅导教学" id="reason-servant"
+                                               checked="checked"><span></span>
+                                    </div>
+                                    <label for="reason-servant">辅导教学</label>
+                                </div>
+                                <div class="evalu-item-list">
+                                    <div class="radio-box">
+                                        <input type="radio" name="info[method]" value="其他" id="reason-servant"
+                                               checked="checked"><span></span>
+                                    </div>
+                                    <label for="reason-servant">其他</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="writeinfo">
+                            <label>姓名：</label>
+                            <input type="text" name="info[name]" placeholder="请输入您的姓名:" value="">
+                        </div>
+                        <div class="writeinfo">
+                            <label>手机：</label>
+                            <input type="text" name="info[mobile]" placeholder="请输入您的手机:" value="">
+                        </div>
+                        <a href="javascript:" onclick="ajaxPutData('myform1',264,true)" class="btn-bg">提交获取测试结果</a>
+                        <p class="tip">24小时内，测试结果会有专业的老师电话告知，请保持电话通畅</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="gongChengIn gongChengIn2">
+            <div class="header">
+                <h2><span>本次报名接受</span><br/><em>以下学历</em><strong>提升形式</strong></h2>
+            </div>
+            <div class="cont">
+                <ul class="clearfix">
+                    <li class="item item1">
+                        <div class="top">
+                            <h3>初中<br/>升专科</h3>
+                        </div>
+                        <a href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="link">查询报考条件</a>
+                    </li>
+                    <li class="item item2">
+                        <div class="top">
+                            <h3>专本<br/>连读</h3>
+                        </div>
+                        <a href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="link">查询报考条件</a>
+                    </li>
+                    <li class="item item3">
+                        <div class="top">
+                            <h3>高中<br/>升专科</h3>
+                        </div>
+                        <a href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="link">查询报考条件</a>
+                    </li>
+                    <li class="item item4">
+                        <div class="top">
+                            <h3>专科<br/>升本科</h3>
+                        </div>
+                        <a href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="link">查询报考条件</a>
+                    </li>
+                    <li class="item item5">
+                        <div class="top">
+                            <h3>其他<br/>形式</h3>
+                        </div>
+                        <a href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="link">查询报考条件</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <div class="gongChengIn gongChengIn3">
+            <h2 class="header">推荐高校报考专业信息一览</h2>
+            <ul class="cont">
+                <li>
+                    <p class="school">主考院校：广东名校</p>
+                    <p class="major">主考专业：英语</p>
+                    <div class="img">
+                        <img src="./statics/images/10.jpg" alt=""/>
+                    </div>
+                    <p class="desc">英语作为一种交流工具，拥有广泛的适用行业，并且我国任然缺乏高端英语专业人才</p>
+                    <a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="btn-bg">了解报考专业</a>
+                    <p class="tips">2018年 <span class="month">2</span>月<span class="date">28</span>日24:00截止</p>
+                </li>
+                <li>
+                    <p class="school">主考院校：华南师范大学</p>
+                    <p class="major">主考专业：人力资源管理</p>
+                    <div class="img">
+                        <img src="./statics/images/09.jpg" alt=""/>
+                    </div>
+                    <p class="desc">人力资源专业市场缺口大，简单好考，专业实用，对口各大主流行业</p>
+                    <a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="btn-bg">了解报考专业</a>
+                    <p class="tips">2018年 <span class="month">2</span>月<span class="date">28</span>日24:00截止</p>
+                </li>
+                <li>
+                    <p class="school">主考院校：广东开放大学</p>
+                    <p class="major">主考专业：会计</p>
+                    <div class="img">
+                        <img src="./statics/images/08.jpg" alt=""/>
+                    </div>
+                    <p class="desc">有企业产生就会有会计的需求，越老越吃香，薪酬可观，职业地位高，是一个永不衰退的职业才</p>
+                    <a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="btn-bg">了解报考专业</a>
+                    <p class="tips">2018年 <span class="month">2</span>月<span class="date">28</span>日24:00截止</p>
+                </li>
+            </ul>
+        </div>
+        <div class="gongChengIn gongChengIn4">
+            <h2><em>成人学历</em>常见问题解答</h2>
+            <ul class="problems clearfix">
+                <li class="item odd"><i class="icon"></i><span>学费需要多少钱？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+                <li class="item even"><i class="icon"></i><span>我在上班，如何安排时间考学历？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+                <li class="item odd"><i class="icon"></i><span>成人学历报考条件是什么？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+                <li class="item even"><i class="icon"></i><span>我能报考什么专业？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+                <li class="item odd"><i class="icon"></i><span>怎么申请入学资格？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+                <li class="item even"><i class="icon"></i><span>成人学历通过率高吗，难吗？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+                <li class="item odd"><i class="icon"></i><span>低基础如何学本科？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+                <li class="item even"><i class="icon"></i><span>报名流程是什么？手续有哪些？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+                <li class="item item9 odd"><i class="icon"></i><span>没专科，可直接考本科学历吗？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+                <li class="item item10 even"><i class="icon"></i><span>含金量高不高？对工作有帮助吗？</span><a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="problem-link">立即咨询</a></li>
+            </ul>
+            <a target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416" class="btn-bg">查询更多学历提升问题</a>
+        </div>
+        <div class="gongChengIn gongChengIn5">
+            <h2 class="tit">限量申请1200元助学金</h2>
+            <form action="" id="xl-frm-3" class="c-form " >
+                <div class="form-group">
+                    <label>姓名：</label>
+                    <input type="text" name="info[name]" placeholder="请输入您的姓名"/>
+                </div>
+                <div class="form-group">
+                    <label>手机：</label>
+                    <input type="text" name="info[mobile]" placeholder="请输入您的电话"/>
+                </div>
+                <input class="url" type="hidden" name="info[url]" value="">
+                <input type="hidden" name="info[classes]" value="学历类">
+                <input type="hidden" name="json" value="1">
+                <input type="hidden" name="dosubmit" value="提交">
+                <a class="btn-bg" href="javascript:void(0)"
+                   onclick="ajaxPutData('xl-frm-3',264,true)">在线申请</a>
+            </form>
+        </div>
+        <div class="gongChengIn gongChengIn6">
+            <p class="copyright">copyright@深圳市中鹏教育科技股份有限公司 粤ICP备09069122号</p>
+        </div>
+    </div>
+</section>
+
+<div class="form-wrapper form-wrapper1" id="footer-fixed">
+    <div class="mid1080 clearfix">
+        <div class="left fl">
+            <div class="swiper-container" id="banner" >
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <p class="probs">我学历低，可以直接报考吗？</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="probs">自考如何报名？</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="probs">都可以考哪些学校？</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="probs">自考报名是什么时候？</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="probs">自考报名需要什么准备什么资料？</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="probs">自考课程有网课吗？是直播还是录像？</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="probs">2018年自考最新报考政策</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="probs">有没有历年真题看一下？</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <p class="probs">可以提供免费学习资料吗？</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a class="right fr" target="_blank" href="javascript:void(0)" onclick="return openChat(this) " lim_company="796416">快点我问问题吧</a>
+    </div>
+</div>
+
+<script src="../common/jquery-1.11.3.min.js"></script>
+<script src="../common/swiper.min.js?t=1"></script>
+<script type="text/javascript" src="../common/formcheck.js?t=170517"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        (function() {
+            $(".url").val((window.top.location.href || window.location.href));
+        })();
+        //首先将#back-to-top隐藏
+        $("#backTop").hide();
+        //当滚动条的位置处于距顶部100像素以下时，跳转链接出现，否则消失
+        $(function() {
+            $(window).scroll(function() {
+                if($(window).scrollTop() > 100) {
+                    $("#backTop").fadeIn(1500);
+                } else {
+                    $("#backTop").fadeOut(1500);
+                }
+            });
+            //当点击跳转链接后，回到页面顶部位置
+            $("#backTop").click(function() {
+                $('body,html').animate({
+                        scrollTop: 0
+                    },
+                    1000);
+                return false;
+            });
+        });
+
+        //导航
+        (function() {
+            var index = 0;
+            $('#nav').find('ul li').on('click',function() {
+                index = $(this).index();
+                $(this).addClass('on').siblings().removeClass('on');
+            });
+            $('#nav').find('ul li').hover(function() {
+                $(this).addClass('on').siblings().removeClass('on');
+            },function() {
+                $(this).removeClass('on');
+                $('#nav').find('ul li').eq(index).addClass('on');
+            })
+        })();
+
+        //轮播
+        (function() {
+            var mySwiper = new Swiper ('.swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+                autoplay:4000
+            });
+        })();
+
+        //弹窗
+        (function() {
+            //初始隐藏弹窗
+            var $layer = $('#layer'),
+                $modal = $layer.find('.modal');
+            $layer.prop('btnStatus','true');
+
+            $('.close-btn').on('click',function() {
+                $(this).parent().hide();
+                $layer.hide().prop('btnStatus','true');
+            });
+        })();
+
+        // 学历页面倒计天
+        (function(){
+            var curDateNow = new Date();
+            var dateNowO = curDateNow.getDate();
+
+            function countdowndate(){
+                //获得倒计时现在的时间
+                dateNow = new Date();
+                //获得倒计时截止时间
+                dateNow.setDate(dateNowO+2);
+                //获得倒计时时间
+                var differTm = (dateNow.getMonth())+1,
+                    differTd = dateNow.getDate();
+                //插入時間
+                $('.date').text(differTd);
+                $('.month').text(differTm);
+                dateNowO +=1;
+                var timmer = setTimeout(countdowndate,1000*60*60*24);
+            }
+            countdowndate();
+        })();
+    });
+</script>
+
+
+
 </body>
 </html>
